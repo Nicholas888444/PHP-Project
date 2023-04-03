@@ -1,0 +1,41 @@
+Before testing the code please do the following
+	Change the information for connecting to turing to your login information
+	Create a database in turing by copy and pasting the DATABASE.sql file into putty
+
+The following features are available in our project:
+	Create a user
+	Log in
+	Evaluate a Car
+	View User Evaluated Cars
+	Log out
+	Change password
+	
+
+Our code has all of the required features for project 1. Challenges included figuring out how to implement a user input form that dynamically changes using javascript, including a forgot password feature, and formatting our website. Javascript is not something that we had covered yet but we wanted to implement a feature that dynamically changed drop down menu options so that the users could get a smooth way to input a car. If the menus did not change then the user may have been able to input a car that is not in the database.
+
+When evaluating a car, it is not possible to store two cars that are identical in car id. For example, I can not store two Ford Bronco's while logged in as the same user. We store each valued car under a dual primary key pair of user id and car id. The users_cars table stores all of the features that the user chose on the home page as well. The final price is reflective of modifications done to the car when evaluating it.
+
+
+
+
+Nick:
+	homepage.php: way to value a car that is in our database. Can only store unique cars
+	history.php: view all of the cars you have valued
+	dynamicDropDownYear.php: refresh dropdown menus. These were implemented by using an example online but modifying it to our needs.
+	dynamicDropDownModel.php: refresh dropdown menus
+	
+Emily:
+	login.php: users login to their account and are directed to home page
+	logout.php: users can logout of their account and are directed to the login page
+	mysqli_connect.php: connects database to Turing (Aubrea created the original structure that the database connects to for MAMP)
+
+Aubrea:
+	DATABASE.sql
+	config.php
+	header.html
+	footer.html
+	forgotpassword.php: Sets a new passsword for user accounts
+
+Corey:
+	layout.css
+	registration.php: Users can create an account

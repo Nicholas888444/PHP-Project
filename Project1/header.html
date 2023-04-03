@@ -1,0 +1,52 @@
+<?php
+// This page begins the HTML header for the site.
+
+// Check for a $page_title value:
+if (!isset($page_title)) {
+	$page_title = '';
+}
+?>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset = "utf-8" />
+    <a name="top"></a>
+    <title><?php echo $page_title; ?></title>
+    <style type="text/css" media="screen">@import "layout.css";</style>
+</head>
+<body>
+
+
+<div class="Header"><h1><?php echo $page_title; ?></h1></div>
+
+<div class="Menu">
+    <?php
+
+    if ($page_title == 'Registration'){
+    echo '<a href="forgotpassword.php" title="Forgotten Password">Forgot Password</a>';
+    echo '<a href="login.php" title="Login">Login</a>';
+    }
+
+    if ($page_title == 'Login Page'){
+    echo '<a href="forgotpassword.php" title="Forgotten Password">Forgot Password</a>';
+    echo '<a href="registrationpage.php" title="Registration Page">Register</a>';
+    }
+
+    if ($page_title == 'Forgotten Password'){
+    echo '<a href="registrationpage.php" title="Registration Page">Register</a>';
+    echo '<a href="login.php" title="Login">Login</a>';
+    }
+
+    if ($page_title == 'Home Page') {
+    echo '<a href="logout.php" title="Logout">Logout</a>';
+    echo '<a href="forgotpassword.php" title="Change Password">Change Password</a>';
+    echo '<a href="homepage.php" title="Home Page">Home</a>';
+    }
+
+    ?></div>
+
+
+    <div class="Content">
+<!-- End of Header -->
